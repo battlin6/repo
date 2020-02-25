@@ -34,6 +34,7 @@ git config --global user.email "EmailAddress"
 
 11. `git add "filename"` //注意文件要加拓展名
     `git commit -m "explanation"` //这里的双引号加不加无所谓
+***我现在终于知道加双引号是为了保护空格——如果文件名里面有空格，不加双引号就会导致很麻烦***
 	`git status` 
 	`git diff`
 
@@ -116,7 +117,7 @@ git push -u origin master
     `git push -u origin master`
   之后的提交就可以去掉`-u`，使用`git push origin master`即可
 //当然啦Mr.Liao告诉我们用`git remote add origin git@github.com:battlin6/repo.git`来关联，这个我没试过，应该也可以
-*//这个就涉及到https和@git的两种不同形式，留坑了解*
+*//这个就涉及到https和git@的两种不同形式，留坑了解*
 
   好了好了，已经了解了，这两种是不同的协议，在GitHub的提示界面也是可以选择的
   
@@ -126,7 +127,7 @@ git push -u origin master
   ![](https://user-gold-cdn.xitu.io/2020/2/25/1707b14c78c747de?w=1226&h=169&f=png&s=18572)
 
   类似于这样的形式
-  不过当然还是建议用@git的模式
+  不过当然还是建议用git@的模式
   >你也许还注意到，GitHub给出的地址不止一个，还可以用 https://github.com/battlin6/repo.git 这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。
 
   >使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。
@@ -134,3 +135,9 @@ git push -u origin master
 27. 如果一不小心关联错了远程库或者想要更换，可以使用`git remote remove origin`命令
   *//毕竟基本上远程库我们都命名为了origin*
 28. 刚刚说的是本地到远端，但是实际情况是我们大多都是从远端到本地，即先远程库操作，需要的时候再clone到本地
+  使用命令`git clone git@github.com:battlin6/test.git`即可
+
+  //你想把本地库放在哪，就在那个路径下git bash，而且需要注意的是它会自己建好一个test文件夹的
+  //这里面用的是git@的方式，https就不写了~~（也没试过）~~
+
+29. 
