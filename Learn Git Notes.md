@@ -141,6 +141,9 @@ git push -u origin master
   //这里面用的是git@的方式，https就不写了~~（也没试过）~~
 
 29. 如果出现`RT ! [rejected] master -> master (fetch first)`
+
   在push远程服务器的时候发现出现此错误；原因是没有同步远程的master
+  
   所以我们需要先同步一下
+  
   `git pull origin master`
