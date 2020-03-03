@@ -142,8 +142,8 @@ git push -u origin master
 
 29. 如果出现`RT ! [rejected] master -> master (fetch first)`
 
-  在push远程服务器的时候发现出现此错误；原因是没有同步远程的master
+    在push远程服务器的时候发现出现此错误；原因是没有同步远程的master
   
-  所以我们需要先同步一下
+    所以我们需要先同步一下
   
-  `git pull origin master`
+    `git pull origin master`
